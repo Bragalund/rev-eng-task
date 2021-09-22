@@ -1,6 +1,8 @@
 # Hello Rev  
 
-## Nyttige verktøy  
+Forsøker meg på litt enkel reverse-engineering av et c-program.  
+
+## Verktøy  
 
 ### gdb
  
