@@ -6,7 +6,7 @@ Oppgaven går ut på å finne det hardkodede passordet i executablen i det kompi
 ## Verktøy  
 
 gdb (Gnu debugger)
-
+[peda](https://github.com/longld/peda) (python exploitation development assistance)
 
 ### Hvordan bruke gnu debugger  
 
@@ -18,9 +18,21 @@ gdb crackme 	# laster executable inn i gdb
 (gdb) set disassembly-function intel	# Setter syntaksen på assmbly til intel spesifikk syntax
 (gdb) disas main	# Viser assemblykoden for main-funksjonen  
 (gdb) break *main	# Setter breakpoint på main-funksjonen  
-(gdb) run 		# Kjører executablen og stopper på første breakpoint  
+(gdb) run noe		# Kjører executablen med argumentet "noe" og stopper på første breakpoint som er der main-funksjonen starter
 (gdb) ni	# stepper gjennom programmet linje for linje
+
 ```
+
+Etter å ha kjørt __disas main__ la jeg merke til puts-kommandoen.
+Valgte å bruke kommandoen: x/s <minneaddresse>
+x/s  - som betyr å printe, men i string-format  
+
+```GDB
+(gdb) x/s 0x0000555555400736
+0x555555400736 <main+28>:	"\350\225\376\377\377\270\377\377\377\377", <incomplete sequence \351\202>
+```
+
+
 
 ### strings
 
