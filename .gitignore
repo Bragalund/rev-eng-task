@@ -1,2 +1,5 @@
 .gdb_history
 peda-session-crackme.txt
+*.lock
+rev-eng-task-ghidra.rep/
+rev-eng-task-ghidra.gpr

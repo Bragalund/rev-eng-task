@@ -83,6 +83,17 @@ Yes, password123 is correct.        <----
 
 Det hardkodede passordet i executablen er: password123
 
+## Hvordan bruke Ghidra  
+
+Ghidra kan brukes for reverse-engineering.
+
+```shell
+sudo snap install ghidra
+```
+
+![generert kode fra ghidra](ghidra_decompiled.png)
+
+Man kan enkelt se hvilke tekst som sammenlignes, og det er enkelt å se hva passordet må være, for å være riktig, i strncmp-funksjonen.  
 
 
 ## Annen kunnskap  
