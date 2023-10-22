@@ -1,12 +1,14 @@
-# Hello Rev  
+# Rev-eng-task 
 
 Forsøker meg på litt enkel reverse-engineering av et c-program.  
+Oppgaven går ut på å finne det hardkodede passordet i executablen i det kompilerte C-programmet.
 
 ## Verktøy  
 
-### gdb
- 
-Gnu debugger
+gdb (Gnu debugger)
+
+
+### Hvordan bruke gnu debugger  
 
 ```sh
 gdb crackme 	# laster executable inn i gdb
@@ -14,7 +16,7 @@ gdb crackme 	# laster executable inn i gdb
 
 ```GDB
 (gdb) set disassembly-function intel	# Setter syntaksen på assmbly til intel spesifikk syntax
-(gdb) dissasemble main	# Viser assemblykoden for main-funksjonen  
+(gdb) disas main	# Viser assemblykoden for main-funksjonen  
 (gdb) break *main	# Setter breakpoint på main-funksjonen  
 (gdb) run 		# Kjører executablen og stopper på første breakpoint  
 (gdb) ni	# stepper gjennom programmet linje for linje
